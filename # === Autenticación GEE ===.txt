@@ -1,0 +1,9 @@
+# === Autenticación GEE ===
+import ee
+try:
+    ee.Initialize()
+    print("✅ EE inicializado")
+except Exception:
+    ee.Authenticate()
+    ee.Initialize()
+    print("✅ EE autenticado e inicializado")
